@@ -1,0 +1,13 @@
+
+
+
+
+<form method="POST" action="{% url 'testing' %}">
+
+    {% csrf_token %}
+    <input type="hidden" value="{{ hall.id }}" name="hallid"/>
+    <input type="text" name="name" value="{{ hall.name }}"/>
+    <textarea name="description">{{ hall.description }}</textarea>
+
+    <input type="submit" value="Update"/>
+</form>

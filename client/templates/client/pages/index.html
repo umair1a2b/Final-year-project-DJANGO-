@@ -1,0 +1,363 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EVENTO</title>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Conference project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}"/>
+<link rel="stylesheet" type="text/css" href="{%static 'styles/bootstrap4/bootstrap.min.css'  %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Menu -->
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			<div class="logo menu_logo">
+				<a href="#">
+					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
+						<div class="logo_image"><div><img src="{% static 'images/logo.png' %}" alt=""></div></div>
+						<div class="logo_content">
+							<div class="logo_text logo_text_not_ie"></div>
+							<div class="logo_sub"></div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<ul>
+	            <li class="menu_item"><a href="{% url 'index' %}">Home</a></li>
+				<li class="menu_item"><a href="{% url 'about' %}">About us</a></li>
+				<li class="menu_item"><a href="{% url 'video' %}">VideoGraphers</a></li>
+				<li class="menu_item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+				<li class="menu_item"><a href="{% url 'contact' %}">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_social_title">Follow uf on Social Media</div>
+			<ul>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		<!-- <div class="home_background" style="background-image: url(images/index.jpg)"></div> -->
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/index1.jpg' %}" data-speed="0.8"></div>
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div>
+										<a href="#">
+											<div class="logo_container d-flex flex-row align-items-start justify-content-start">
+												<div class="logo_image"><div><img src="{% static 'images/logo.png' %}" alt="" ></div></div>
+												<div class="logo_content">
+													<div id="logo_text" class="logo_text logo_text_not_ie"></div>
+													<div class="logo_sub"></div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="header_social ml-auto">
+										<ul>
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+									<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul>
+													<li class="menu_item"><a href="{% url 'index' %}">Home</a></li>
+				                                    <li class="menu_item"><a href="{% url 'about' %}">About us</a></li>
+                                                    <li class="menu_item"><a href="{% url 'video' %}">VideoGraphers</a></li>
+		                                    		<li class="menu_item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+			                                    	<li class="menu_item"><a href="{% url 'contact' %}">Contact</a></li>
+												</ul>
+											</nav>
+                                            <div class="header_extra ml-auto">
+												<div class="button header_button"><a href="{% url 'register'%}">Register Hall?</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="home_content_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+							<div class="home_buttons">
+								<div class="button home_button"><a href="{% url 'signup' %}">SignUp</a></div>
+								<div class="button home_button"><a href="{% url 'login' %}">LogIn</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="intro_content d-flex flex-row flex-wrap align-items-start justify-content-between">
+
+
+
+			<!-- Intro Item -->
+			<div class="intro_item">
+				<div class="intro_image"><img src="{% static 'images/intro_1.jpg' %}" alt=""></div>
+				<div class="intro_body">
+					<div class="intro_title"><a href="{% url 'login' %}">Mughal-e-Azam</a></div>
+					<div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+				</div>
+			</div>
+
+			<!-- Intro Item -->
+			<div class="intro_item">
+				<div class="intro_image"><img src="{% static 'images/intro_2.jpg' %}" alt="" height="373px"></div>
+				<div class="intro_body">
+					<div class="intro_title"><a href="{% url 'login' %}">MILANO</a></div>
+					<div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+				</div>
+			</div>
+
+			<!-- Intro Item -->
+			<div class="intro_item">
+				<div class="intro_image"><img src="{% static 'images/intro_3.jpg' %}" alt=""></div>
+				<div class="intro_body">
+					<div class="intro_title"><a href="{% url 'login' %}">TAJ BANQUET</a></div>
+					<div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+				</div>
+			</div>
+
+			<!-- Intro Item -->
+			<div class="intro_item">
+				<div class="intro_image"><img src="{% static 'images/intro_4.jpg' %}" height="373px" alt=""></div>
+				<div class="intro_body">
+					<div class="intro_title"><a href="{% url 'login' %}">EMPERIOR MARQUEES</a></div>
+					<div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+				</div>
+			</div>
+
+			<!-- Intro Item -->
+			<div class="intro_item">
+				<div class="intro_image"><img src="{% static 'images/intro_5.jpg' %}" height="373px"  alt=""></div>
+				<div class="intro_body">
+					<div class="intro_title"><a href="{% url 'login' %}">AL JANAT</a></div>
+					<div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+				</div>
+			</div>
+
+			<!-- Intro Item -->
+			<div class="intro_item">
+				<div class="intro_image"><img src="{% static 'images/intro_6.jpg' %}" height="373px"  alt=""></div>
+				<div class="intro_body">
+					<div class="intro_title"><a href="{% url 'login' %}">LE-CHALET</a></div>
+					<div class="intro_subtitle">Donec quis metus ac arcu luctus accumsan.</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Pricing -->
+
+	<div class="pricing">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/index.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<h3 style="text-align: center;"><font color="#e3a010">WHAT WE DO</font></h3>
+			<div style="background-color:#610B0B; width:100%">
+
+				<div class="container">
+					<div class="row" style="padding-top:10px; padding-bottom:20px">
+
+					<a href="index.html"><img src="{% static 'img/caterers.jpg' %}" alt="" class="img-responsive displayed  animated fadeInLeftBig"></a><br><br>
+
+					<div class="col-sm-1"><img src="{% static 'img/event-managment.jpg' %}" alt="" class="img-responsive displayed  animated  zoomInLeft">	</div>
+					<div class="col-sm-3 animated  zoomInLeft"><p style="text-align:left; font-size:medium;"><b style="color:#e3a010">Event Management</b><br> We Provide all type of event managment services to our precious clients according to their Need and Event.</p></div>
+
+					<div class="col-sm-1"><img src="{% static 'img/wedding.jpg' %}" alt="" class="img-responsive displayed  animated  zoomInRight">	</div>
+					<div class="col-sm-3 animated  zoomInRight"> <p style="text-align:left; font-size:medium"><b style="color:#e3a010">Wedding</b><br> We offer to make your precious moments twinkling like a pearl and our creative wedding planner knows how to make your wedding memorable.</p></div>
+
+					<div class="col-sm-1"><img src="{%  static 'img/corporate-event.jpg' %}" alt="" class="img-responsive displayed  animated   zoomInLeft">	</div>
+					<div class="col-sm-3 animated   zoomInLeft"><p style="text-align:left; font-size:medium"><b style="color:#e3a010">Portfolio</b><br> At Mughal-e-Azam, our service covers all your corporate event requirements: size, theme, cuisine, entertainment & budget.</p></div>
+
+<div style="clear:both"></div><br><br>
+
+					<div class="col-sm-1"><img src="{% static 'img/birthday.jpg' %}" alt="" class="img-responsive displayed  animated zoomInRight">	</div>
+					<div class="col-sm-3 animated zoomInRight"> <p style="text-align:left; font-size:medium"><b style="color:#e3a010">Birthdays Parties</b><br> At Mughal-e-Azam, the party will be held in a specially reserved area of the Hall and there will be a fully trained party entertainers.</p></div>
+
+					<div class="col-sm-1"><img src="{% static 'img/stage-decoration.jpg' %}" alt="" class="img-responsive displayed  animated zoomInLeft">	</div>
+					<div class="col-sm-3 animated zoomInLeft"> <p style="text-align:left; font-size:medium"><b style="color:#e3a010">Stage Decoration</b><br> Wedding stage decoration prices depends on what kind of design you are looking for. Good news is, we also make stages on your custom designs.</p></div>
+
+					<div class="col-sm-1"><img src="{% static 'img/get-togather.jpg' %}" alt="" class="img-responsive displayed  animated zoomInRight">	</div>
+					<div class="col-sm-3 animated zoomInRight"> <p style="text-align:left; font-size:small"><b style="color:#e3a010; font-size:medium">Get Together </b><br> The most memorable Get Together aren’t just about unbelievable food. They’re about amazing atmosphere, great entertainment and stylish decorations.</p></div>
+
+
+</div></div></div>
+<div style="clear:both"></div>
+
+<div style="background-color:#252527; width:100%; height:auto;"></div>
+
+<div style="clear:both"></div>
+
+
+
+
+		</div>
+	</div>
+
+	<!-- Calendar -->
+
+
+	<!-- Call to action -->
+
+	<div class="cta">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/index1.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cta_content text-center">
+						<div class="cta_title">EVENT WITH ELEGANCE</div>
+						<div class="button cta_button"><a href="{% url 'login' %}">Find out more</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Footer Column -->
+					<div class="col-lg-4 footer_col">
+						<div class="footer_about">
+							<div>
+								<a href="#">
+									<div class="logo_container d-flex flex-row align-items-start justify-content-start">
+										<div class="logo_image"><div><img src="{% static 'images/logo.png' %}" alt=""></div></div>
+									</div>
+								</a>
+							</div>
+							<div class="footer_about_text">
+								<p></p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Footer Column -->
+					<div class="col-lg-3 footer_col">
+						<div class="footer_links">
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Information</a></li>
+
+							</ul>
+						</div>
+					</div>
+
+					<!-- Footer Column -->
+					<div class="col-lg-3 footer_col">
+						<div class="footer_links">
+							<ul>
+								<li><a href="#">Logistics</a></li>
+								<li><a href="#">Our Partners</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Footer Column -->
+
+				</div>
+			</div>
+		</div>
+		<div class="footer_extra">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_extra_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
+							<div class="footer_social">
+								<div class="footer_social_title">Follow us on Social Media</div>
+								<ul class="footer_social_list">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							<div class="footer_extra_right ml-lg-auto text-lg-right">
+								<div class="footer_extra_links">
+									<ul>
+										<li><a href="contact.html">Contact us</a></li>
+										<li><a href="#">Privacy</a></li>
+									</ul>
+								</div>
+								<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by EVENTO</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
